@@ -1,97 +1,250 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 💳 OnliFin Android - App Financeiro Mobile
 
-# Getting Started
+![React Native](https://img.shields.io/badge/React%20Native-TypeScript-blue)
+![Expo](https://img.shields.io/badge/Expo-Latest-black)
+![iOS](https://img.shields.io/badge/iOS-13%2B-gray)
+![Android](https://img.shields.io/badge/Android-6%2B-green)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/status-Beta-orange)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+**App mobile para plataforma financeira OnliFin. Gestão de contas, transferências, cartão digital e investimentos.**
 
-## Step 1: Start Metro
+## 🎯 Sobre
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+OnliFin Android é um aplicativo financeiro completo com:
+- ✅ Conta digital com débito/crédito
+- ✅ Transferências PIX, TED, DOC
+- ✅ Cartão digital e físico
+- ✅ Investimentos e renda fixa
+- ✅ Consultas de saldo e extrato
+- ✅ Segurança biométrica
+- ✅ Atendimento in-app
+- ✅ Offline support
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+**Stack:** React Native + TypeScript, Expo, Redux
 
-```sh
-# Using npm
+## 🚀 Quick Start
+
+### Pré-requisitos
+- Node.js 18+
+- npm ou yarn
+- Expo CLI: `npm install -g expo-cli`
+- Android Studio (emulador) ou dispositivo físico
+
+### Instalação
+```bash
+# Clone
+git clone https://github.com/onlitec/onlifin-android
+cd onlifin-android
+
+# Instale dependências
+npm install
+
+# Start Expo
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
+### Rodando no Emulador/Dispositivo
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+**Android:**
+```bash
 npm run android
-
-# OR using Yarn
-yarn android
+# Ou pressione 'a' no terminal
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+**iOS:**
+```bash
 npm run ios
-
-# OR using Yarn
-yarn ios
+# Requer macOS com Xcode
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+**Desenvolvimento:**
+```bash
+npm start
+# Use Expo Go app no seu celular para ler o QR code
+```
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 📦 Estrutura do Projeto
 
-## Step 3: Modify your app
+```
+onlifin-android/
+├── src/
+│   ├── screens/         # Telas principais
+│   │   ├── Home.tsx
+│   │   ├── Account.tsx
+│   │   ├── Transfer.tsx
+│   │   ├── Card.tsx
+│   │   ├── Investments.tsx
+│   │   ├── Settings.tsx
+│   │   └── Login.tsx
+│   ├── components/      # Componentes reutilizáveis
+│   │   ├── Button/
+│   │   ├── Card/
+│   │   ├── Input/
+│   │   └── Modal/
+│   ├── navigation/      # React Navigation
+│   ├── services/        # API client
+│   ├── store/           # Redux slices
+│   ├── hooks/           # Custom hooks
+│   ├── utils/           # Utilitários
+│   └── types/           # TypeScript types
+├── assets/              # Imagens, ícones, fontes
+├── app.json             # Configuração Expo
+├── eas.json             # Configuração EAS Build
+└── .env.example         # Variáveis de ambiente
+```
 
-Now that you have successfully run the app, let's make changes!
+## ✨ Funcionalidades Principais
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### 💰 Conta Digital
+- Saldo em tempo real
+- Consulta de extrato
+- Comprovantes de transação
+- Limite de crédito
+- Programa de cashback
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+### 💸 Transferências
+- PIX instantâneo
+- TED e DOC agendado
+- Envio de dinheiro para contatos
+- Pagamento de contas
+- Recebimento de requisições
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+### 💳 Cartão Digital
+- Cartão virtual
+- Pagamentos NFC
+- Limite de gasto
+- Bloqueio/desbloqueio
+- Alertas de transação
 
-## Congratulations! :tada:
+### 📈 Investimentos
+- Renda fixa
+- CDB e tesouro
+- Rendimento em tempo real
+- Resgate automático
+- Consultor de investimentos
 
-You've successfully run and modified your React Native App. :partying_face:
+### 🔐 Segurança
+- Biometria (Face ID, Touch ID)
+- Autenticação 2FA
+- Criptografia end-to-end
+- Detecção de fraude
+- Confirmação de identidade
 
-### Now what?
+## 🔧 Tecnologias
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+**Framework:**
+- React Native + TypeScript
+- Expo (development & deployment)
 
-# Troubleshooting
+**UI & Navigation:**
+- React Navigation 6.x
+- NativeBase / React Native Paper
+- Animated API
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+**State Management:**
+- Redux Toolkit
+- Redux Thunk
+- Redux Persist (offline)
 
-# Learn More
+**APIs & Storage:**
+- Axios (HTTP client)
+- AsyncStorage (local cache)
+- React Query (caching)
 
-To learn more about React Native, take a look at the following resources:
+**Security:**
+- JWT + Refresh tokens
+- Biometric SDK
+- Secure storage (Keychain/Keystore)
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**DevOps:**
+- EAS Build (managed build service)
+- GitHub Actions (CI/CD)
+- Expo Updates (hot releases)
+
+## 📱 Suporta
+
+- **iOS:** 13.0+
+- **Android:** 6.0+ (API 23)
+- **Tamanho APK:** ~80MB
+- **Tamanho iOS:** ~150MB
+
+## 🚀 Build & Deploy
+
+### Build Local
+```bash
+# Debug
+eas build --platform android --profile preview
+
+# Release
+eas build --platform android --profile production
+```
+
+### Distribuição
+```bash
+# Google Play
+eas submit --platform android --latest
+
+# App Store (requer macOS)
+eas submit --platform ios --latest
+```
+
+### Expo Updates (Hot Updates)
+```bash
+# Deploy update sem nova build
+eas update --branch production
+```
+
+## 🧪 Testes
+
+```bash
+# Testes unitários
+npm test
+
+# Coverage
+npm run test:coverage
+```
+
+## 📚 Documentação
+
+- [Setup Guide](docs/SETUP.md)
+- [API Reference](docs/API.md)
+- [UI Components](docs/COMPONENTS.md)
+- [Security Guide](docs/SECURITY.md)
+- [Deployment](docs/DEPLOYMENT.md)
+
+## 🤝 Contribuindo
+
+```bash
+git checkout -b feature/sua-feature
+npm run dev
+# Faça mudanças
+git commit -m "feat: descrição"
+git push origin feature/sua-feature
+```
+
+## 💬 Suporte
+
+- 📧 [support@onlifin.com](mailto:support@onlifin.com)
+- 🐛 [Issues](https://github.com/onlitec/onlifin-android/issues)
+- 📚 [Knowledge Base](https://help.onlifin.com)
+
+## 📄 Licença
+
+MIT License - Veja [LICENSE](LICENSE)
+
+## 🎯 Roadmap
+
+- [ ] Widget de saldo
+- [ ] NFC para qualquer cartão
+- [ ] Consolidação de contas
+- [ ] Assistente IA
+- [ ] Marketplace de serviços
+- [ ] SuperApp (uber, food, etc)
+
+---
+
+**Status:** Beta  
+**Última atualização:** 2026-10-04  
+**Versão:** 0.5.0  
+**Beta testers:** 1000+
